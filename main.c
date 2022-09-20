@@ -17,13 +17,13 @@ void assign_array(int arr[SIZE])
 	return;
 }
 
-void print_array(static int arr[SIZE], static int i)
+void print_array(int arr[SIZE], int i)
 {
-	printf("-----------------------------------------------------------------------------------------------\n");
-
 	printf("Number of elements : %d\n", SIZE);
 
-	for (int i = 0; i < 10; ++i)
+	printf("-----------------------------------------------------------------------------------------------\n");
+
+	for (int i = 0; i < SIZE; ++i)
 	{
 		printf("%d\n", arr[i]);
 	}
@@ -35,7 +35,7 @@ void print_array(static int arr[SIZE], static int i)
 
 int main(void)
 {
-	static int arr[SIZE];
+	int arr[SIZE];
 	int i = 0;
 
 	assign_array(arr);
