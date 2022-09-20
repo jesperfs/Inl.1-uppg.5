@@ -17,7 +17,7 @@ void assign_array(int arr[SIZE])
 	return;
 }
 
-void print_array(int arr[SIZE], int i)
+void print_array(int arr[SIZE])
 {
 	printf("Number of elements : %d\n", SIZE);
 
@@ -36,10 +36,9 @@ void print_array(int arr[SIZE], int i)
 int main(void)
 {
 	int arr[SIZE];
-	int i = 0;
 
 	assign_array(arr);
-	print_array(arr, i);
+	print_array(arr);
 
 	return 0;
 }
