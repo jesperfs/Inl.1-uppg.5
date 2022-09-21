@@ -1,18 +1,12 @@
 #include <stdio.h>
 #define SIZE 10
 
-void assign_array(int arr[SIZE])
+void assign_array(int arr[SIZE], int i)
 {
-	arr[0] = 9;
-	arr[1] = 8;
-	arr[2] = 7;
-	arr[3] = 6;
-	arr[4] = 5;
-	arr[5] = 4;
-	arr[6] = 3;
-	arr[7] = 2;
-	arr[8] = 1;
-	arr[9] = 0;
+	for (int i = 0; i < SIZE; ++i)
+	{
+		arr[i] = SIZE - 1 - i;
+	}
 
 	return;
 }
@@ -36,8 +30,9 @@ void print_array(int arr[SIZE])
 int main(void)
 {
 	int arr[SIZE];
+	int i = 0;
 
-	assign_array(arr);
+	assign_array(arr, i);
 	print_array(arr);
 
 	return 0;
