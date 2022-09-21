@@ -1,23 +1,22 @@
 #include <stdio.h>
-#define SIZE 10
 
-void assign_array(int arr[SIZE], int i)
+void assign_array(int arr[10], const int size)
 {
-	for (int i = 0; i < SIZE; ++i)
+	for (int i = 0; i < size; ++i)
 	{
-		arr[i] = SIZE - 1 - i;
+		arr[i] = size - 1 - i;
 	}
 
 	return;
 }
 
-void print_array(int arr[SIZE])
+void print_array(int arr[10], const int size)
 {
-	printf("Number of elements : %d\n", SIZE);
+	printf("Number of elements : %d\n", size);
 
 	printf("-----------------------------------------------------------------------------------------------\n");
 
-	for (int i = 0; i < SIZE; ++i)
+	for (int i = 0; i < size; ++i)
 	{
 		printf("%d\n", arr[i]);
 	}
@@ -29,11 +28,10 @@ void print_array(int arr[SIZE])
 
 int main(void)
 {
-	int arr[SIZE];
-	int i = 0;
+	int arr[10];
 
-	assign_array(arr, i);
-	print_array(arr);
+	assign_array(arr, 10);
+	print_array(arr, 10);
 
 	return 0;
 }
